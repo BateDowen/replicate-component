@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+p {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  color: #1f2128;
+}
+.main-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #fff;
+  width: 370px;
+  height: 326px;
+  margin: 80px auto 0;
+  border: 1px;
+  border-radius: 6px;
+  padding: 10px 0px 10px 0px;
+  box-shadow: #1414141f 0px 8px 15px 0px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+.button-check {
+  width: 23px;
+  height: 23px;
+  opacity: 0.6;
+  position: relative;
+}
+.button-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    border: 0.7px solid #cdcdcd;
+    border-radius: 6px;
+  }
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.button-check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  .button-check input:checked ~ .checkmark{
+    background-color: #2469F6;
+  }
+  .button-check .checkmark:after {
+    left: 7px;
+    top: 0px;
+    width: 8px;
+    height: 17px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+}
+.all-pages-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  padding: 8px 15px 8px 22px;
+  position: relative;
+}
+.all-pages-container::after {
+  content: "";
+  width: 340px;
+  border-bottom: 0.7px solid #cdcdcd;
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+.all-pages {
+  position: relative;
+  height: 164px;
+  padding-bottom: 10px;
+}
+.single-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  padding: 0px 15px 0px 22px;
+}
+.btn-container {
+  padding: 10px 15px;
+}
+.btn {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  color: #1f2128;
+  background-color: #ffce22;
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+}
+.all-pages::before {
+  content: "";
+  width: 340px;
+  border-bottom: 0.7px solid #cdcdcd;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+}
